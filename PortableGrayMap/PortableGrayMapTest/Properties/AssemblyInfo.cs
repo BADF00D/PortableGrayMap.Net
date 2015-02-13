@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("PortableGrayMap")]
-[assembly: AssemblyDescription("Load and saves files in formats as pgm, ppm, pbm.")]
+[assembly: AssemblyTitle("PortableGrayMapTest")]
+[assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Tanpop")]
-[assembly: AssemblyProduct("PortableGrayMap")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("PortableGrayMapTest")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("5d953cb1-8561-485a-8e13-5682fbd0a304")]
+[assembly: Guid("f5609b6e-be51-4b9d-9051-0ecdcab4609a")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -34,4 +34,3 @@ using System.Runtime.InteropServices;
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("0.0.0.0")]
 [assembly: AssemblyFileVersion("0.0.0.0")]
-[assembly: InternalsVisibleTo("PortableGrayMapTest")]
