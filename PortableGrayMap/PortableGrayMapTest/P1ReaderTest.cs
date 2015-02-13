@@ -5,14 +5,14 @@
     using PortableGrayMap;
 
     [TestFixture]
-    public class PortbaleAsciiBitmapReaderTest
+    public class P1ReaderTest
     {
         private const string PathToSampleFolder = @"../../../Sources/Samples/P1/";
 
         [SetUp]
         public void Setup()
         {
-            _reader = new PortbaleAsciiBitmapReader();
+            _reader = new P1Reader();
         }
 
         private IPortbaleMapReader<IPortbaleBitmap, bool> _reader;

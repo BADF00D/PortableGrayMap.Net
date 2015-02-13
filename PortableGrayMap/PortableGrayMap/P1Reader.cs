@@ -3,7 +3,7 @@
     using System;
     using System.IO;
 
-    internal class PortbaleAsciiBitmapReader : IPortbaleMapReader<IPortbaleBitmap, bool>
+    internal class P1Reader : IPortbaleMapReader<IPortbaleBitmap, bool>
     {
         public IPortbaleBitmap ReadFromStream(Stream stream)
         {
