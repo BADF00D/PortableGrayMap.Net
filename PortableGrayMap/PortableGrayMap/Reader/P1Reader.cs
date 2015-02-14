@@ -1,9 +1,8 @@
-﻿namespace PortableGrayMap
+﻿namespace PortableGrayMap.Reader
 {
     using System;
     using System.IO;
     using System.Text;
-    using Tanpohp.Annotations.Resharper;
     using Tanpohp.Extensions;
 
     internal class P1Reader : IPortbaleMapReader<IPortbaleBitmap, bool>

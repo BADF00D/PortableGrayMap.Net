@@ -1,9 +1,10 @@
-﻿namespace PortableGrayMapTest
+﻿namespace PortableGrayMapTest.Reader
 {
     using System;
     using System.IO;
     using NUnit.Framework;
     using PortableGrayMap;
+    using PortableGrayMap.Reader;
 
     [TestFixture]
     public class P1ReaderTest
