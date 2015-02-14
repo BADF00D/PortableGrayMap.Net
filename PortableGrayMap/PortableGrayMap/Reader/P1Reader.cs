@@ -59,10 +59,10 @@
             {
                 reader.ReadChar();
                 currentChar = (char)reader.PeekChar();
-                if (currentChar == '#')
+                while (currentChar == '#')
                 {
                     SkipCommentLine(reader);
-                    currentChar = (char) reader.PeekChar();
+                    currentChar = (char)reader.PeekChar();
                 }
             }
         }
