@@ -1,5 +1,6 @@
 ﻿namespace PortableGrayMapTest
 {
+    using System;
     using System.IO;
     using NUnit.Framework;
     using PortableGrayMap;
@@ -24,6 +25,13 @@
 
             Assert.AreEqual(200, image.Width);
             Assert.AreEqual(200, image.Height);
+        }
+
+        [Test]
+        [ExpectedException(typeof(ArgumentException))]
+        public void CheckmagicNumber()
+        {
+            _reader.ReadFromFile(Path.Combine(PathToSampleFolder, "../P4/", "feed.pbm"));
         }
     }
 }
