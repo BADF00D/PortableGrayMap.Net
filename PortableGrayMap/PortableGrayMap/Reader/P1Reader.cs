@@ -17,7 +17,7 @@
 
             var reader = new BinaryReader(stream, Encoding.ASCII);
             var magicNumber = ReadMagicNumber(reader);
-            if (magicNumber != MagicNumberForP1) throw new ArgumentException("MagicNumberForP1 {0} differs from expected {1}".FormatWith(magicNumber, MagicNumberForP1));
+            if (magicNumber != MagicNumberForP1) throw new ArgumentException("MagicNumberFor '{0}' differs from expected '{1}'".FormatWith(magicNumber, MagicNumberForP1));
             var width = ReadNextInt(reader);
             var height = ReadNextInt(reader);
             var pixels = ReadPixels(reader, width, height);

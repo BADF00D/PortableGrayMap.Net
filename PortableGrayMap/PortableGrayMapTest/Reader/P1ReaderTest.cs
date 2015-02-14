@@ -61,5 +61,28 @@
             Assert.IsFalse(image.Pixels[36*200 + 99]);
             Assert.IsFalse(image.Pixels[199*200 + 199]);
         }
+
+        [Test]
+        public void ReadTwoImagesFromOneFile()
+        {
+            IPortbaleBitmap image1, image2;
+            using (
+                var fileStream = new FileStream(Path.Combine(PathToSampleFolder, "circleWithSecondCircle.pbm"),
+                    FileMode.Open))
+            {
+                image1 = _reader.ReadFromStream(fileStream);
+                image2 = _reader.ReadFromStream(fileStream);
+            }
+            
+            Assert.AreEqual(200, image1.Width, "Width of image1");
+            Assert.AreEqual(200, image1.Height, "Height of image1");
+            Assert.IsNotNull(image1.Pixels, "Pixels of image1");
+            Assert.AreEqual(40000, image1.Pixels.Length, "Number of Pixels of image1");
+            Assert.AreEqual(200, image2.Width, "Width of image2");
+            Assert.AreEqual(200, image2.Height, "Height of image2");
+            Assert.IsNotNull(image2.Pixels, "Pixels of image2");
+            Assert.AreEqual(40000, image2.Pixels.Length, "Number of Pixels of image2");
+            
+        }
     }
 }
