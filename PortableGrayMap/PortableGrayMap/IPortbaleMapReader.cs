@@ -1,5 +1,6 @@
 ﻿namespace PortableGrayMap
 {
+    using System;
     using System.IO;
     using Tanpohp.Annotations.Resharper;
 
@@ -10,6 +11,7 @@
         /// </summary>
         /// <param name="stream"></param>
         /// <returns></returns>
+        /// <exception cref="ArgumentNullException">Thrown if stream is null.</exception>
         TMap ReadFromStream([NotNull]Stream stream);
 
         /// <summary>
