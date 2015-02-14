@@ -23,8 +23,8 @@
         {
             var image = _reader.ReadFromFile(Path.Combine(PathToSampleFolder, "circle.ascii.pbm"));
 
-            Assert.AreEqual(200, image.Width);
-            Assert.AreEqual(200, image.Height);
+            Assert.AreEqual(200, image.Width, "Width");
+            Assert.AreEqual(200, image.Height, "Height");
         }
 
         [Test]
