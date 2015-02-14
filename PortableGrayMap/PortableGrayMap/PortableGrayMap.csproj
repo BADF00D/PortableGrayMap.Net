@@ -52,6 +52,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reader\BasicReader.cs" />
     <Compile Include="Reader\P1Reader.cs" />
+    <Compile Include="Reader\P4Reader.cs" />
     <Compile Include="RgbPixel.cs" />
   </ItemGroup>
   <ItemGroup>

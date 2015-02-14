@@ -46,8 +46,13 @@
     <Compile Include="PortbleAnymapTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reader\P1ReaderTest.cs" />
+    <Compile Include="Reader\P4ReaderTest.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Tanpohp\Tanpohp.Extensions\Tanpohp.Extensions.csproj">
+      <Project>{3665CB16-D371-4CF8-ABE7-560895CB373D}</Project>
+      <Name>Tanpohp.Extensions</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PortableGrayMap\PortableGrayMap.csproj">
       <Project>{d540df3c-0a39-43da-9624-4213260e24e3}</Project>
       <Name>PortableGrayMap</Name>
