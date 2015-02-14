@@ -21,9 +21,23 @@
             if (magicNumber != MagicNumberForP1) throw new ArgumentException("MagicNumberForP1 {0} differs from expected {1}".FormatWith(magicNumber, MagicNumberForP1));
             var width = ReadNextInt(reader);
             var height = ReadNextInt(reader);
+            var pixels = ReadPixels(reader, width, height);
 
+            return new PortbaleBitmap(width, height, pixels);
+        }
 
-            return new PortbaleBitmap(width, height, null);
+        private static bool[] ReadPixels(BinaryReader reader, int width, int height)
+        {
+            var pixels = new bool[width*height];
+            for (var y = 0; y < height; y++)
+            {
+                for (var x = 0; x < width; x++)
+                {
+                    pixels[y*width + x] = ReadNextInt(reader) == 1;
+                }
+            }
+
+            return pixels;
         }
 
         private static int ReadNextInt(BinaryReader reader)
