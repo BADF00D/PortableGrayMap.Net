@@ -46,6 +46,7 @@
     <Compile Include="IPortbleAnymap.cs" />
     <Compile Include="P1Reader.cs" />
     <Compile Include="PortbaleBitmap.cs" />
+    <Compile Include="PortbleAnymap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RgbPixel.cs" />
   </ItemGroup>

@@ -11,7 +11,7 @@
         private const string MagicNumberForP1 = "P1";
 
 
-        public IPortbaleBitmap ReadFromStream([NotNull]Stream stream)
+        public IPortbaleBitmap ReadFromStream(Stream stream)
         {
             if(stream == null) throw new ArgumentNullException("stream");
             if(!stream.CanRead) throw new ArgumentException("Cannot read from stream.");

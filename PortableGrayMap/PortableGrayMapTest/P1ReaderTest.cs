@@ -42,30 +42,5 @@
             Assert.IsFalse(image.Pixels[36*200 + 99]);
             Assert.IsFalse(image.Pixels[199*200 + 199]);
         }
-
-        [Test]
-        public void IndexerGet()
-        {
-            var image = _reader.ReadFromFile(Path.Combine(PathToSampleFolder, "circle.ascii.pbm"));
-
-            Assert.AreEqual(image[0, 0], image.Pixels[0], "1st");
-            Assert.AreEqual(image[29, 99], image.Pixels[99 * 200 + 29], "2nd");
-            Assert.AreEqual(image[30, 99], image.Pixels[99 * 200 + 30], "3th");
-            Assert.AreEqual(image[35, 99], image.Pixels[99 * 200 + 35], "4th");
-        }
-
-        [Test]
-        public void IndexerSet()
-        {
-            var image = _reader.ReadFromFile(Path.Combine(PathToSampleFolder, "circle.ascii.pbm"));
-            image[0, 0] = true;
-            image[1, 1] = false;
-            image[2, 2] = true;
-            image[3, 3] = false;
-            Assert.AreEqual(true, image[0, 0], "1st");
-            Assert.AreEqual(false, image[1, 1], "2nd");
-            Assert.AreEqual(true, image[2, 2], "3th");
-            Assert.AreEqual(false, image[3, 3], "4th");
-        }
     }
 }
