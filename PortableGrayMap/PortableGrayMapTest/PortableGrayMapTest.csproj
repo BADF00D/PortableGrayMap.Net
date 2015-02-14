@@ -46,6 +46,7 @@
     <Compile Include="PortbleAnymapTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reader\P1ReaderTest.cs" />
+    <Compile Include="Reader\P2ReaderTest.cs" />
     <Compile Include="Reader\P4ReaderTest.cs" />
   </ItemGroup>
   <ItemGroup>
