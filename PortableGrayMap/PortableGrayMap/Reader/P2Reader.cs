@@ -2,14 +2,14 @@
 {
     using System.IO;
 
-    internal class P2Reader : BasicReader<PortableGraymap, byte>
+    internal class P2Reader : BasicReader<IPortableGraymap, byte>, IPortableGraymapReader
     {
         protected override string ExpectedMagicNumber
         {
             get { return "P2"; }
         }
 
-        protected override PortableGraymap ContinueReadImage(BinaryReader reader, int width, int height)
+        protected override IPortableGraymap ContinueReadImage(BinaryReader reader, int width, int height)
         {
             var maxValue = ReadNextInt(reader);
 

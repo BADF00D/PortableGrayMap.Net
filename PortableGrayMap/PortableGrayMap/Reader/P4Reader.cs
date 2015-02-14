@@ -3,7 +3,7 @@
     using System.Collections.Generic;
     using System.IO;
 
-    internal class P4Reader : BasicReader<IPortbaleBitmap, bool>
+    internal class P4Reader : BasicReader<IPortbaleBitmap, bool>, IPortableBitmapReader
     {
         protected override string ExpectedMagicNumber
         {

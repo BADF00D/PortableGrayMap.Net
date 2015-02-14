@@ -42,7 +42,9 @@
     <Compile Include="..\SharedAssemblyInfo.cs">
       <Link>Properties\SharedAssemblyInfo.cs</Link>
     </Compile>
+    <Compile Include="IPortableBitmapReader.cs" />
     <Compile Include="IPortableGrayMap.cs" />
+    <Compile Include="IPortableGraymapReader.cs" />
     <Compile Include="IPortablePixmap.cs" />
     <Compile Include="IPortbaleBitmap.cs" />
     <Compile Include="IPortbaleMapReader.cs" />
@@ -55,6 +57,7 @@
     <Compile Include="Reader\P1Reader.cs" />
     <Compile Include="Reader\P2Reader.cs" />
     <Compile Include="Reader\P4Reader.cs" />
+    <Compile Include="Reader\Factory.cs" />
     <Compile Include="RgbPixel.cs" />
   </ItemGroup>
   <ItemGroup>
