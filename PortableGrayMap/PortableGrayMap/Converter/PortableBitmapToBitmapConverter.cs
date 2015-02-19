@@ -12,9 +12,9 @@
         {
             var bitmap = new Bitmap(source.Width, source.Height, PixelFormat.Format32bppArgb);
 
-            for(var y=0; y<source.Width; y++)
+            for(var y=0; y<source.Height; y++)
             {
-                for (var x = 0; x < source.Height; x++)
+                for (var x = 0; x < source.Width; x++)
                 {
                     var value = source[x, y] ? _black : _white;
                     bitmap.SetPixel(x,y, value);
