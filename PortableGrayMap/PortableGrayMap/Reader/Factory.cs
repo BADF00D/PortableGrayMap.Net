@@ -5,12 +5,12 @@
     public static class Factory
     {
         private static readonly Lazy<IPortableBitmapReader> P1Reader = new Lazy<IPortableBitmapReader>(() => new P1Reader());
-        
+
         private static readonly Lazy<IPortableBitmapReader> P4Reader = new Lazy<IPortableBitmapReader>(() => new P4Reader());
-        
+
         private static readonly Lazy<IPortableGraymapReader> P2Reader = new Lazy<IPortableGraymapReader>(() => new P2Reader());
 
-        private static readonly Lazy<IPortableGraymapReader> P5Reader = new Lazy<IPortableGraymapReader>(()=> new P5Reader()); 
+        private static readonly Lazy<IPortableGraymapReader> P5Reader = new Lazy<IPortableGraymapReader>(() => new P5Reader()); 
 
         private static readonly Lazy<IPortableBitmapReader> PortableBitmapReader =
             new Lazy<IPortableBitmapReader>(() => new PortableBitmapReader());

@@ -5,8 +5,7 @@
     using System.Text;
     using Tanpohp.Extensions;
 
-    internal abstract class BasicReader<TMap, TPixel> : IPortbaleMapReader<TMap, TPixel>
-        where TMap : IPortbleAnymap<TPixel>
+    internal abstract class BasicReader<TMap> : IPortbaleMapReader<TMap>
     {
         protected abstract string ExpectedMagicNumber { get; }
 

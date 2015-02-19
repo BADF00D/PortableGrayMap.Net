@@ -17,7 +17,7 @@
 
         private const string PathToSampleFolder = @"../../../Sources/Samples/P1/";
 
-        private IPortbaleMapReader<IPortbaleBitmap, bool> _reader;
+        private IPortableBitmapReader _reader;
 
         [Test]
         [ExpectedException(typeof (ArgumentException))]

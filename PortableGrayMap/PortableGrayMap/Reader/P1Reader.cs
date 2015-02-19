@@ -2,7 +2,7 @@
 {
     using System.IO;
 
-    internal class P1Reader : BasicReader<IPortbaleBitmap, bool>, IPortableBitmapReader
+    internal class P1Reader : BasicReader<IPortbaleBitmap>, IPortableBitmapReader
     {
         protected override string ExpectedMagicNumber
         {

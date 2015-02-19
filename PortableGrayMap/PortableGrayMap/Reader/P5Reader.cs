@@ -2,7 +2,7 @@
 {
     using System.IO;
 
-    internal class P5Reader : BasicReader<IPortableGraymap, ushort>, IPortableGraymapReader
+    internal class P5Reader : BasicReader<IPortableGraymap>, IPortableGraymapReader
     {
         protected override string ExpectedMagicNumber
         {

@@ -4,7 +4,7 @@
     using System.IO;
     using Tanpohp.Annotations.Resharper;
 
-    public interface IPortbaleMapReader<out TMap, out TPixel> where TMap : IPortbleAnymap<TPixel>
+    public interface IPortbaleMapReader<out TMap> 
     {
         /// <summary>
         /// Reads a image from stream.

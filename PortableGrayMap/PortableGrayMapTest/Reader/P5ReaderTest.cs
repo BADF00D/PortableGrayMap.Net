@@ -23,7 +23,7 @@ namespace PortableGrayMapTest.Reader
 
         private const string PathToSampleFolder = @"../../../Sources/Samples/P5/";
 
-        private IPortbaleMapReader<IPortableGraymap, ushort> _reader;
+        private IPortableGraymapReader _reader;
 
         [Test]
         [ExpectedException(typeof(ArgumentException))]
