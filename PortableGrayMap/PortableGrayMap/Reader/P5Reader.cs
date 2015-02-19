@@ -13,6 +13,7 @@
         {
             var maxValue = ReadNextInt(reader);
 
+            SkipWhiteSpaceCharacters(reader);
 
             var pixels = maxValue < 256
                 ? ReadSingleBytePixel(width, height, reader)
@@ -28,7 +29,7 @@
             {
                 for (var x = 0; x < width; x++)
                 {
-                    pixel[y*width + x] = reader.ReadByte();
+                    pixel[y * width + x] = reader.ReadUInt16();
                 }
             }
 
@@ -42,7 +43,7 @@
             {
                 for (var x = 0; x < width; x++)
                 {
-                    pixel[y*width + x] = reader.ReadUInt16();
+                    pixel[y*width + x] = reader.ReadByte();
                 }
             }
 
