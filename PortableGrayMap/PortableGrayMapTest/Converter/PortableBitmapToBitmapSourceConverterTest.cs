@@ -28,26 +28,13 @@
 
         private IPortbaleBitmap _sourceWithBlackCross;
 
-        private static Bitmap ConvertToBitmap(BitmapSource source)
-        {
-            using (var memoryStream = new MemoryStream())
-            {
-                var encoder = new PngBitmapEncoder();
-                encoder.Frames.Add(BitmapFrame.Create(source));
-                encoder.Save(memoryStream);
-
-                memoryStream.Seek(0, SeekOrigin.Begin);
-
-                return new Bitmap(memoryStream);
-            }
-        }
 
         [Test]
         public void TestWithBlackCrossImage()
         {
             var bitmapSource = _converter.ConvertFrom(_sourceWithBlackCross);
             //this is ugly, but we cant directyly access pixels in a bitmap source.
-            var bitmap = ConvertToBitmap(bitmapSource);
+            var bitmap = bitmapSource.ConvertToBitmap();
             Assert.AreEqual(10, bitmapSource.Width, "Width");
             Assert.AreEqual(10, bitmapSource.Height, "Height");
 
