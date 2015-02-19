@@ -1,12 +1,12 @@
 ﻿namespace PortableGrayMap
 {
-    internal class PortableGraymap : PortbleAnymap<byte>, IPortableGraymap
+    internal class PortableGraymap : PortbleAnymap<ushort>, IPortableGraymap
     {
-        public PortableGraymap(int width, int height, byte[] pixels, int maxValue) : base(width, height, pixels)
+        public PortableGraymap(int width, int height, ushort[] pixels, ushort maxValue) : base(width, height, pixels)
         {
             MaxValue = maxValue;
         }
 
-        public int MaxValue { get; private set; }
+        public ushort MaxValue { get; private set; }
     }
 }

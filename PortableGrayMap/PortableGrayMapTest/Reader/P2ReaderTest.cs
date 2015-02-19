@@ -17,7 +17,7 @@
 
         private const string PathToSampleFolder = @"../../../Sources/Samples/P2/";
 
-        private IPortbaleMapReader<IPortableGraymap, byte> _reader;
+        private IPortbaleMapReader<IPortableGraymap, ushort> _reader;
 
         [Test]
         public void CheckImageWithMultilineComments()
