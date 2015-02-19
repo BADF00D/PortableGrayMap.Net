@@ -43,6 +43,7 @@
     <Compile Include="..\SharedAssemblyInfo.cs">
       <Link>Properties\SharedAssemblyInfo.cs</Link>
     </Compile>
+    <Compile Include="Converter\ConverterFactory.cs" />
     <Compile Include="Converter\IPortableBitmapToConverter.cs" />
     <Compile Include="Converter\PortableBitmapToBitmapConverter.cs" />
     <Compile Include="IPortableBitmapReader.cs" />
