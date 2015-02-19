@@ -10,8 +10,12 @@
         
         private static readonly Lazy<IPortableGraymapReader> P2Reader = new Lazy<IPortableGraymapReader>(() => new P2Reader());
 
+        private static readonly Lazy<IPortableGraymapReader> P5Reader = new Lazy<IPortableGraymapReader>(()=> new P5Reader()); 
+
         private static readonly Lazy<IPortableBitmapReader> PortableBitmapReader =
             new Lazy<IPortableBitmapReader>(() => new PortableBitmapReader());
+
+        private static readonly Lazy<IPortableGraymapReader> PortableGraymapReader= new Lazy<IPortableGraymapReader>(()=> new PortableGraymapReader()); 
 
         /// <summary>
         /// Gets reader for PortbaleBitmaps with magic string 'P1'.
@@ -41,6 +45,15 @@
         }
 
         /// <summary>
+        /// Gets reader for PortbaleGraymaps with magic string 'P5'.
+        /// </summary>
+        /// <returns></returns>
+        public static IPortableGraymapReader GetReaderForBinaryPortableGraymap()
+        {
+            return P5Reader.Value;
+        }
+
+        /// <summary>
         /// Returns reader that is able to read PortbaleBitmaps with magic string 'P1' or 'P4'.
         /// </summary>
         /// <returns></returns>
@@ -49,6 +62,17 @@
         public static IPortableBitmapReader GetPortableBitmapReader()
         {
             return PortableBitmapReader.Value;
+        }
+
+        /// <summary>
+        /// Returns reader that is able to read PortbaleGraymaps with magic string 'P2' or 'P5'.
+        /// </summary>
+        /// <returns></returns>
+        /// <remarks>Is able to distinguish between P2 and P5 format. But if you use ReadFromStream, 
+        /// be sure to provide a stream that can be seeked.</remarks>
+        public static IPortableGraymapReader GetPortableGraymapReader()
+        {
+            return PortableGraymapReader.Value;
         }
     }
 }

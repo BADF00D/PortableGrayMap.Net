@@ -60,6 +60,7 @@
     <Compile Include="Reader\Factory.cs" />
     <Compile Include="Reader\P5Reader.cs" />
     <Compile Include="Reader\PortableBitmapReader.cs" />
+    <Compile Include="Reader\PortableGraymapReader.cs" />
     <Compile Include="RgbPixel.cs" />
   </ItemGroup>
   <ItemGroup>
