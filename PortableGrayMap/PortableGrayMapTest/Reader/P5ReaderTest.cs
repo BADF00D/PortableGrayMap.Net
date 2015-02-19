@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PortableGrayMapTest.Reader
+﻿namespace PortableGrayMapTest.Reader
 {
+    using System;
     using System.IO;
     using NUnit.Framework;
     using PortableGrayMap;
@@ -26,7 +21,7 @@ namespace PortableGrayMapTest.Reader
         private IPortableGraymapReader _reader;
 
         [Test]
-        [ExpectedException(typeof(ArgumentException))]
+        [ExpectedException(typeof (ArgumentException))]
         public void CheckMagicNumber()
         {
             _reader.ReadFromFile(Path.Combine(PathToSampleFolder, "../P2/", "lena.ascii.pgm"));
@@ -44,7 +39,7 @@ namespace PortableGrayMapTest.Reader
             Assert.AreEqual(321*481, image.Pixels.Length, "Number of Pixels");
             //test some pixels
             Assert.AreEqual(52, image.Pixels[0], "Pixel 0");
-            Assert.AreEqual(139, image[87,294], "Pixel [87,294]");
+            Assert.AreEqual(139, image[87, 294], "Pixel [87,294]");
             Assert.AreEqual(65, image[87, 295], "Pixel [87,295]");
             Assert.AreEqual(133, image[87, 296], "Pixel [87,296]");
         }
