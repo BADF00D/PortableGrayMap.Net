@@ -4,6 +4,6 @@
 
     public interface IPortableBitmapToConverter<out T>
     {
-        T ConvertFrom([NotNull]IPortbaleBitmap source);
+        T ConvertFrom([NotNull] IPortbaleBitmap source);
     }
 }

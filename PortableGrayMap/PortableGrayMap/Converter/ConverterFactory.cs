@@ -13,7 +13,7 @@
             if (typeof (T) == typeof (Bitmap))
                 return (IPortableBitmapToConverter<T>) PortableBitmaptoBitmapConvert.Value;
 
-            throw new Exception("Unkown destination format.");
+            throw new ArgumentException("Unkown destination format.");
         }
     }
 }
