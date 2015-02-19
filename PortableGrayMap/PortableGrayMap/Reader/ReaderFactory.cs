@@ -2,55 +2,60 @@
 {
     using System;
 
-    public static class Factory
+    public static class ReaderFactory
     {
-        private static readonly Lazy<IPortableBitmapReader> P1Reader = new Lazy<IPortableBitmapReader>(() => new P1Reader());
+        private static readonly Lazy<IPortableBitmapReader> P1Reader =
+            new Lazy<IPortableBitmapReader>(() => new P1Reader());
 
-        private static readonly Lazy<IPortableBitmapReader> P4Reader = new Lazy<IPortableBitmapReader>(() => new P4Reader());
+        private static readonly Lazy<IPortableBitmapReader> P4Reader =
+            new Lazy<IPortableBitmapReader>(() => new P4Reader());
 
-        private static readonly Lazy<IPortableGraymapReader> P2Reader = new Lazy<IPortableGraymapReader>(() => new P2Reader());
+        private static readonly Lazy<IPortableGraymapReader> P2Reader =
+            new Lazy<IPortableGraymapReader>(() => new P2Reader());
 
-        private static readonly Lazy<IPortableGraymapReader> P5Reader = new Lazy<IPortableGraymapReader>(() => new P5Reader()); 
+        private static readonly Lazy<IPortableGraymapReader> P5Reader =
+            new Lazy<IPortableGraymapReader>(() => new P5Reader());
 
-        private static readonly Lazy<IPortableBitmapReader> PortableBitmapReader =
+        private static readonly Lazy<IPortableBitmapReader> P1AndP4Reader =
             new Lazy<IPortableBitmapReader>(() => new PortableBitmapReader());
 
-        private static readonly Lazy<IPortableGraymapReader> PortableGraymapReader= new Lazy<IPortableGraymapReader>(()=> new PortableGraymapReader()); 
+        private static readonly Lazy<IPortableGraymapReader> P2AndP5Reader =
+            new Lazy<IPortableGraymapReader>(() => new PortableGraymapReader());
 
         /// <summary>
         /// Gets reader for PortbaleBitmaps with magic string 'P1'.
         /// </summary>
         /// <returns></returns>
-        public static IPortableBitmapReader GetReaderForAsciiPortableBitmap()
+        public static IPortableBitmapReader AsciiPortableBitmapReader
         {
-            return P1Reader.Value;
+            get { return P1Reader.Value; }
         }
 
         /// <summary>
         /// Gets reader for PortbaleBitmaps with magic string 'P4'.
         /// </summary>
         /// <returns></returns>
-        public static IPortableBitmapReader GetReaderForBinaryPortableBitmap()
+        public static IPortableBitmapReader BinaryPortableBitmapReader
         {
-            return P4Reader.Value;
+            get { return P4Reader.Value; }
         }
 
         /// <summary>
         /// Gets reader for PortbaleGraymaps with magic string 'P2'.
         /// </summary>
         /// <returns></returns>
-        public static IPortableGraymapReader GetReaderForAsciiPortableGraymap()
+        public static IPortableGraymapReader AsciiPortableGraymapReader
         {
-            return P2Reader.Value;
+            get { return P2Reader.Value; }
         }
 
         /// <summary>
         /// Gets reader for PortbaleGraymaps with magic string 'P5'.
         /// </summary>
         /// <returns></returns>
-        public static IPortableGraymapReader GetReaderForBinaryPortableGraymap()
+        public static IPortableGraymapReader BinaryPortableGraymapReader
         {
-            return P5Reader.Value;
+            get { return P5Reader.Value; }
         }
 
         /// <summary>
@@ -59,9 +64,9 @@
         /// <returns></returns>
         /// <remarks>Is able to distinguish between P1 and P4  format. But if you use ReadFromStream, 
         /// be sure to provide a stream that can be seeked.</remarks>
-        public static IPortableBitmapReader GetPortableBitmapReader()
+        public static IPortableBitmapReader PortableBitmapReader
         {
-            return PortableBitmapReader.Value;
+            get { return P1AndP4Reader.Value; }
         }
 
         /// <summary>
@@ -70,9 +75,9 @@
         /// <returns></returns>
         /// <remarks>Is able to distinguish between P2 and P5 format. But if you use ReadFromStream, 
         /// be sure to provide a stream that can be seeked.</remarks>
-        public static IPortableGraymapReader GetPortableGraymapReader()
+        public static IPortableGraymapReader GetPortableGraymapReader
         {
-            return PortableGraymapReader.Value;
+            get { return P2AndP5Reader.Value; }
         }
     }
 }

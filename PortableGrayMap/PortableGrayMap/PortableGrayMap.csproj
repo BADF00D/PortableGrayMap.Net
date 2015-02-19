@@ -65,7 +65,7 @@
     <Compile Include="Reader\P1Reader.cs" />
     <Compile Include="Reader\P2Reader.cs" />
     <Compile Include="Reader\P4Reader.cs" />
-    <Compile Include="Reader\Factory.cs" />
+    <Compile Include="Reader\ReaderFactory.cs" />
     <Compile Include="Reader\P5Reader.cs" />
     <Compile Include="Reader\PortableBitmapReader.cs" />
     <Compile Include="Reader\PortableGraymapReader.cs" />

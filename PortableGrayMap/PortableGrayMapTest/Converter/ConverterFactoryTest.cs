@@ -12,16 +12,17 @@
         [Test]
         public void TestWithBitmap()
         {
-            var converter = ConverterFactory.GetConvertFor<Bitmap>();
+            var converter = ConverterFactory.ToBitmapConverter;
 
             Assert.IsNotNull(converter);
         }
 
         [Test]
-        [ExpectedException(typeof(ArgumentException))]
         public void TestWithBitmapSource()
         {
-            var converter = ConverterFactory.GetConvertFor<BitmapSource>();
+            var converter = ConverterFactory.ToBitmapSourceConverter;
+
+            Assert.IsNotNull(converter);
         }
     }
 }

@@ -14,7 +14,7 @@
         /// <returns></returns>
         /// <exception cref="ArgumentNullException">Thrown if stream is null.</exception>
         /// <exception cref="ArgumentException">Thrown if stream can not be seeked. This is used to determine magic 
-        /// string. If you know the magic string, use excact reader froom Reader.Factory.</exception>
+        /// string. If you know the magic string, use excact reader froom Reader.ReaderFactory.</exception>
         public IPortableGraymap ReadFromStream(Stream stream)
         {
             if (stream == null) throw new ArgumentNullException("stream");
@@ -28,10 +28,10 @@
             switch (magicString)
             {
                 case "P2":
-                    reader = Factory.GetReaderForAsciiPortableGraymap();
+                    reader = ReaderFactory.AsciiPortableGraymapReader;
                     break;
                 case "P5":
-                    reader = Factory.GetReaderForBinaryPortableGraymap();
+                    reader = ReaderFactory.BinaryPortableGraymapReader;
                     break;
                 default:
                     throw new ArgumentException("Unexpected magic string '{0}'.Expected 'P1' or 'P4'.");
