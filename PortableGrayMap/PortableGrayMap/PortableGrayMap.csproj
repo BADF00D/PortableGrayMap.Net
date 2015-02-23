@@ -76,6 +76,7 @@
     <Compile Include="Writer\BasicWriter.cs" />
     <Compile Include="Writer\IPortableMapWriter.cs" />
     <Compile Include="Writer\P1Writer.cs" />
+    <Compile Include="Writer\P2Writer.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Tanpohp\Tanpohp.Annotations\Tanpohp.Annotations.csproj">
