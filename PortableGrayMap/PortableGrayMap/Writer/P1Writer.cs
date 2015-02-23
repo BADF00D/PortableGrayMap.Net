@@ -3,7 +3,7 @@ namespace PortableGrayMap.Writer
     using System.IO;
     using System.Text;
 
-    internal class P1Writer : BasicWriter<IPortbaleBitmap>
+    internal class P1Writer : BasicWriter<IPortbaleBitmap>, IPortableBitmapWriter
     {
         public override void WriteToStream(Stream stream, IPortbaleBitmap image)
         {
