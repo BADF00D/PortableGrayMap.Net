@@ -61,6 +61,7 @@
     <Compile Include="IPortbaleMapReader.cs" />
     <Compile Include="IPortbleAnymap.cs" />
     <Compile Include="PortableGraymap.cs" />
+    <Compile Include="PortablePixmap.cs" />
     <Compile Include="PortbaleBitmap.cs" />
     <Compile Include="PortbleAnymap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -77,8 +78,10 @@
     <Compile Include="Writer\IPortableBitmapWriter.cs" />
     <Compile Include="Writer\IPortableGraymapWriter.cs" />
     <Compile Include="Writer\IPortableMapWriter.cs" />
+    <Compile Include="Writer\IPortablePixmapWriter.cs" />
     <Compile Include="Writer\P1Writer.cs" />
     <Compile Include="Writer\P2Writer.cs" />
+    <Compile Include="Writer\P3Writer.cs" />
     <Compile Include="Writer\WriterFactory.cs" />
   </ItemGroup>
   <ItemGroup>

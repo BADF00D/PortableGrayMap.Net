@@ -6,9 +6,9 @@ namespace PortableGrayMap
 
         public RgbPixel(int rgb)
         {
-            Red = (byte)((rgb >> 16) | 0xFF);
-            Green = (byte)((rgb >> 8) | 0xFF);
-            Blue = (byte)(rgb | 0xFF);
+            Red = (byte)((rgb >> 16) & 0xFF);
+            Green = (byte)((rgb >> 8) & 0xFF);
+            Blue = (byte)(rgb & 0xFF);
         }
     }
 }
