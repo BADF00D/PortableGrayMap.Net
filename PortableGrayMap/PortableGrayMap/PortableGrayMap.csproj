@@ -53,12 +53,9 @@
     <Compile Include="Converter\PortableBitmapToBitmapSourceConverter.cs" />
     <Compile Include="Converter\PortableGraymapToBitmapConverter.cs" />
     <Compile Include="Converter\PortableGraymapToBitmapSourceConverter.cs" />
-    <Compile Include="IPortableBitmapReader.cs" />
     <Compile Include="IPortableGrayMap.cs" />
-    <Compile Include="IPortableGraymapReader.cs" />
     <Compile Include="IPortablePixmap.cs" />
     <Compile Include="IPortbaleBitmap.cs" />
-    <Compile Include="IPortbaleMapReader.cs" />
     <Compile Include="IPortbleAnymap.cs" />
     <Compile Include="PortableGraymap.cs" />
     <Compile Include="PortablePixmap.cs" />
@@ -66,6 +63,9 @@
     <Compile Include="PortbleAnymap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reader\BasicReader.cs" />
+    <Compile Include="Reader\IPortableBitmapReader.cs" />
+    <Compile Include="Reader\IPortableGraymapReader.cs" />
+    <Compile Include="Reader\IPortbaleMapReader.cs" />
     <Compile Include="Reader\P1Reader.cs" />
     <Compile Include="Reader\P2Reader.cs" />
     <Compile Include="Reader\P4Reader.cs" />

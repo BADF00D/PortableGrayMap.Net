@@ -1,4 +1,4 @@
-﻿namespace PortableGrayMap
+﻿namespace PortableGrayMap.Reader
 {
     /// <summary>
     /// Reader is able to read PortableBitmap files. Usually with endings *.pgm.

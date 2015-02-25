@@ -1,4 +1,4 @@
-﻿namespace PortableGrayMap
+﻿namespace PortableGrayMap.Reader
 {
     using System;
     using System.IO;
