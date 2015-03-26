@@ -60,6 +60,7 @@
     <Compile Include="Reader\P3ReaderTest.cs" />
     <Compile Include="Reader\P4ReaderTest.cs" />
     <Compile Include="Reader\P5ReaderTest.cs" />
+    <Compile Include="Reader\P6ReaderTest.cs" />
     <Compile Include="Writer\P1WriterTest.cs" />
     <Compile Include="Writer\P2WriterTest.cs" />
     <Compile Include="Writer\P3WriterTest.cs" />
