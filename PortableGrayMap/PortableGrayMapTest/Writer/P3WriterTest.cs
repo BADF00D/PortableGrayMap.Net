@@ -1,6 +1,5 @@
 ﻿namespace PortableGrayMapTest.Writer
 {
-    using System.Drawing.Imaging;
     using System.IO;
     using NUnit.Framework;
     using PortableGrayMap;
@@ -16,9 +15,9 @@
             _imageWithBytePixels = new PortablePixmap(2, 2,
                 new[]
                 {
-                    new RgbPixel(0x000000), new RgbPixel(0xFF0000), 
+                    new RgbPixel(0x000000), new RgbPixel(0xFF0000),
                     new RgbPixel(0x00FF00), new RgbPixel(0x0000FF)
-                }, 0xFF);//todo test max Value
+                }, 0xFF); //todo test max Value
         }
 
         private IPortableMapWriter<IPortablePixmap> _writer;
