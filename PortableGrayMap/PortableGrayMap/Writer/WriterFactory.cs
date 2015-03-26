@@ -31,7 +31,7 @@
             get { return P3Writer.Value; }
         }
 
-        public static IPortableBitmapWriter BianaryPortableBitmapWriter
+        public static IPortableBitmapWriter BinaryPortableBitmapWriter
         {
             get { return P4Writer.Value; }
         }

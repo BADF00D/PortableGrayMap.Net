@@ -1,7 +1,10 @@
 ﻿namespace PortableGrayMapTest
 {
+    using System.Collections.Generic;
+    using System.IO;
     using NUnit.Framework;
     using PortableGrayMap;
+    using PortableGrayMap.Reader;
 
     [TestFixture]
     public class PortbleAnymapTest
@@ -24,6 +27,16 @@
             Assert.AreEqual(false, image[1, 0], "Pixel 1/0");
         }
 
+        public void T()
+        {
+            var p1Reader = ReaderFactory.AsciiPortableBitmapReader;
+            IList<IPortbaleBitmap> images = new List<IPortbaleBitmap>();
+            using(var fileStream = new FileStream("pathToFile.pbm", FileMode.Open)){
+                if(fileStream.Position < fileStream.Length){
+                    images.Add(p1Reader.ReadFromStream(fileStream));
+                }
+            }
+        }
         [Test]
         public void IndexerSet()
         {
