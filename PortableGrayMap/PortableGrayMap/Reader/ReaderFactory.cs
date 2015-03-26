@@ -19,6 +19,9 @@
         private static readonly Lazy<IPortableGraymapReader> P5Reader =
             new Lazy<IPortableGraymapReader>(() => new P5Reader());
 
+        private static readonly Lazy<IPortablePixmapReader> P6Reader =
+            new Lazy<IPortablePixmapReader>(() => new P6Reader());
+
         private static readonly Lazy<IPortableBitmapReader> P1AndP4Reader =
             new Lazy<IPortableBitmapReader>(() => new PortableBitmapReader());
 
@@ -68,6 +71,15 @@
         public static IPortableGraymapReader BinaryPortableGraymapReader
         {
             get { return P5Reader.Value; }
+        }
+
+        /// <summary>
+        /// Gets reader for PortbalePixmaps with magic string 'P6'.
+        /// </summary>
+        /// <returns></returns>
+        public static IPortablePixmapReader BinaryPortablePixmapReader
+        {
+            get { return P6Reader.Value; }
         }
 
         /// <summary>
