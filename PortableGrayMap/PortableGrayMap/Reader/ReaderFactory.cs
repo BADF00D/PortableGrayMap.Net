@@ -13,6 +13,9 @@
         private static readonly Lazy<IPortableGraymapReader> P2Reader =
             new Lazy<IPortableGraymapReader>(() => new P2Reader());
 
+        private static readonly Lazy<IPortablePixmapReader> P3Reader =
+            new Lazy<IPortablePixmapReader>(() => new P3Reader());
+
         private static readonly Lazy<IPortableGraymapReader> P5Reader =
             new Lazy<IPortableGraymapReader>(() => new P5Reader());
 
@@ -29,6 +32,15 @@
         public static IPortableBitmapReader AsciiPortableBitmapReader
         {
             get { return P1Reader.Value; }
+        }
+
+        /// <summary>
+        /// Gets reader for PortbalePixmap with magic string 'P3'.
+        /// </summary>
+        /// <returns></returns>
+        public static IPortablePixmapReader AsciiPortablePixmapReader
+        {
+            get { return P3Reader.Value; }
         }
 
         /// <summary>

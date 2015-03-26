@@ -1,7 +1,9 @@
 ﻿namespace PortableGrayMap
 {
-    public interface IPortableGraymap : IPortbleAnymap<ushort>
+    using System;
+
+    public interface IPortableGraymap : IPortbleAnymap<UInt16>
     {
-        ushort MaxValue { get; }
+        UInt16 MaxValue { get; }
     }
 }
