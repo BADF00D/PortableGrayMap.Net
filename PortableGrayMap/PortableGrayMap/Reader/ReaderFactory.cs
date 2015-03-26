@@ -28,6 +28,9 @@
         private static readonly Lazy<IPortableGraymapReader> P2AndP5Reader =
             new Lazy<IPortableGraymapReader>(() => new PortableGraymapReader());
 
+        private static readonly Lazy<IPortablePixmapReader> P3AndP6Reader =
+            new Lazy<IPortablePixmapReader>(() => new PortablePixmapReader());
+
         /// <summary>
         /// Gets reader for PortbaleBitmaps with magic string 'P1'.
         /// </summary>
@@ -102,6 +105,17 @@
         public static IPortableGraymapReader GetPortableGraymapReader
         {
             get { return P2AndP5Reader.Value; }
+        }
+
+        /// <summary>
+        /// Returns reader that is able to read PortbalePixmaps with magic string 'P3' or 'P6'.
+        /// </summary>
+        /// <returns></returns>
+        /// <remarks>Is able to distinguish between P3 and P6 format. But if you use ReadFromStream, 
+        /// be sure to provide a stream that can be seeked.</remarks>
+        public static IPortablePixmapReader GetPortablePixmapReader
+        {
+            get { return P3AndP6Reader.Value; }
         }
     }
 }
