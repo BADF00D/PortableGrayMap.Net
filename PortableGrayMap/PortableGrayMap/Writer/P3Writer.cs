@@ -16,6 +16,8 @@
             writer.Write(Space);
             WriteIntAscii(writer, image.Height);
             writer.Write(NewLine);
+            WriteIntAscii(writer, image.MaxValue);
+            writer.Write(NewLine);
             for (var y = 0; y < image.Height; y++)
             {
                 for (var x = 0; x < image.Width; x++)
