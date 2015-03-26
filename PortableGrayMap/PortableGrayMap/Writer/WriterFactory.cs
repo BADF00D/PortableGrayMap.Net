@@ -16,6 +16,9 @@
         private static readonly Lazy<IPortableBitmapWriter> P4Writer =
             new Lazy<IPortableBitmapWriter>(() => new P4Writer());
 
+        private static readonly Lazy<IPortableGraymapWriter> P5Writer =
+            new Lazy<IPortableGraymapWriter>(()=> new P5Writer());
+
         public static IPortableBitmapWriter AsciiPortableBitmapWriter
         {
             get { return P1Writer.Value; }
@@ -34,6 +37,11 @@
         public static IPortableBitmapWriter BinaryPortableBitmapWriter
         {
             get { return P4Writer.Value; }
+        }
+
+        public static IPortableGraymapWriter BinaryPortableGraymapWriter
+        {
+            get { return P5Writer.Value; }
         }
     }
 }
