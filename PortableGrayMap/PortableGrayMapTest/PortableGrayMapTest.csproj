@@ -66,6 +66,7 @@
     <Compile Include="Writer\P3WriterTest.cs" />
     <Compile Include="Writer\P4WriterTest.cs" />
     <Compile Include="Writer\P5WriterTest.cs" />
+    <Compile Include="Writer\P6WriterTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Tanpohp\Tanpohp.Extensions\Tanpohp.Extensions.csproj">

@@ -87,6 +87,7 @@
     <Compile Include="Writer\P3Writer.cs" />
     <Compile Include="Writer\P4Writer.cs" />
     <Compile Include="Writer\P5Writer.cs" />
+    <Compile Include="Writer\P6Writer.cs" />
     <Compile Include="Writer\WriterFactory.cs" />
   </ItemGroup>
   <ItemGroup>
