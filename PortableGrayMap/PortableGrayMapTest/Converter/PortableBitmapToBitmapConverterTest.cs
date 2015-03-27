@@ -12,7 +12,7 @@
         [SetUp]
         public void Setup()
         {
-            _converter = new OneWayPortableBitmapToBitmapConverter();
+            _converter = new PortableBitmapToBitmapConverter();
 
             _sourceWithBlackCross = new PortbaleBitmap(10, 10, new bool[100]);
             _sourceWithDiagonalLine = new PortbaleBitmap(10, 10, new bool[100]);
@@ -26,14 +26,14 @@
             
         }
 
-        private IPortableBitmapToConverter<Bitmap> _converter;
+        private IConverter<IPortbaleBitmap, Bitmap> _converter;
 
         private IPortbaleBitmap _sourceWithBlackCross, _sourceWithDiagonalLine;
 
         [Test]
         public void TestWithBlackCrossImage()
         {
-            using (var bitmap = _converter.ConvertFrom(_sourceWithBlackCross))
+            using (var bitmap = _converter.Convert(_sourceWithBlackCross))
             {
                 Assert.AreEqual(10, bitmap.Width);
                 Assert.AreEqual(10, bitmap.Height);
@@ -57,7 +57,7 @@
         [Test]
         public void TestWithDiagonalLine()
         {
-            using (var bitmap = _converter.ConvertFrom(_sourceWithDiagonalLine))
+            using (var bitmap = _converter.Convert(_sourceWithDiagonalLine))
             {
                 Assert.AreEqual(10, bitmap.Width);
                 Assert.AreEqual(10, bitmap.Height);

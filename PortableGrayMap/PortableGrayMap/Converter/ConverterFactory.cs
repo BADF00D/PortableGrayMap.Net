@@ -6,8 +6,8 @@
 
     public static class ConverterFactory
     {
-        private static readonly Lazy<IPortableBitmapToConverter<Bitmap>> PbmToBitmapConverter =
-            new Lazy<IPortableBitmapToConverter<Bitmap>>(() => new OneWayPortableBitmapToBitmapConverter());
+        private static readonly Lazy<IConverter<IPortbaleBitmap, Bitmap>> PbmToBitmapConverter =
+            new Lazy<IConverter<IPortbaleBitmap, Bitmap>>(() => new PortableBitmapToBitmapConverter());
 
         private static readonly Lazy<IPortableBitmapToConverter<BitmapSource>> PbmToBitmapSourceConverter =
             new Lazy<IPortableBitmapToConverter<BitmapSource>>(() => new OneWayPortableBitmapToBitmapSourceConverter());
@@ -23,7 +23,7 @@
             get { return PbmToBitmapSourceConverter.Value; }
         }
 
-        public static IPortableBitmapToConverter<Bitmap> ToBitmapConverter
+        public static IConverter<IPortbaleBitmap, Bitmap> ToBitmapConverter
         {
             get { return PbmToBitmapConverter.Value; }
         }

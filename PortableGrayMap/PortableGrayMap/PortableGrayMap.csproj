@@ -47,9 +47,10 @@
       <Link>Properties\SharedAssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="Converter\ConverterFactory.cs" />
+    <Compile Include="Converter\IConverter.cs" />
     <Compile Include="Converter\IPortableBitmapToConverter.cs" />
     <Compile Include="Converter\IPortableGraymapToConverter.cs" />
-    <Compile Include="Converter\OneWayPortableBitmapToBitmapConverter.cs" />
+    <Compile Include="Converter\PortableBitmapToBitmapConverter.cs" />
     <Compile Include="Converter\OneWayPortableBitmapToBitmapSourceConverter.cs" />
     <Compile Include="Converter\OneWayPortableGraymapToBitmapConverter.cs" />
     <Compile Include="Converter\OneWayPortableGraymapToBitmapSourceConverter.cs" />
