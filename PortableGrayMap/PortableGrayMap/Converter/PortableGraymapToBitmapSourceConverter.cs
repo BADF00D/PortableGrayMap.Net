@@ -4,9 +4,9 @@
     using System.Windows.Media.Imaging;
     using Tanpohp.Extensions;
 
-    internal class OneWayPortableGraymapToBitmapSourceConverter : IPortableGraymapToConverter<BitmapSource>
+    internal class PortableGraymapToBitmapSourceConverter : IConverter<IPortableGraymap, BitmapSource>
     {
-        public BitmapSource ConvertFrom(IPortableGraymap source)
+        public BitmapSource Convert(IPortableGraymap source)
         {
             var pixelFormat = System.Windows.Media.PixelFormats.Bgr32;
 

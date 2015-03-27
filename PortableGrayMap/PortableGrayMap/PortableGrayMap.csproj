@@ -53,7 +53,7 @@
     <Compile Include="Converter\PortableBitmapToBitmapConverter.cs" />
     <Compile Include="Converter\OneWayPortableBitmapToBitmapSourceConverter.cs" />
     <Compile Include="Converter\OneWayPortableGraymapToBitmapConverter.cs" />
-    <Compile Include="Converter\OneWayPortableGraymapToBitmapSourceConverter.cs" />
+    <Compile Include="Converter\PortableGraymapToBitmapSourceConverter.cs" />
     <Compile Include="IPortableGrayMap.cs" />
     <Compile Include="IPortablePixmap.cs" />
     <Compile Include="IPortbaleBitmap.cs" />
