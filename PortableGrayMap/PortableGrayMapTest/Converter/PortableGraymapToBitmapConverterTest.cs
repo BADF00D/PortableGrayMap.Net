@@ -12,7 +12,7 @@
         [SetUp]
         public void Setup()
         {
-            _convert = new OneWayPortableGraymapToBitmapConverter();
+            _convert = new PortableGraymapToBitmapConverter();
 
             _singleLineColorRamp = new PortableGraymap(17, 1, new ushort[17], 17);
             for (var x = 0; x < 17; x++) _singleLineColorRamp[x, 0] = (ushort) x;
@@ -20,12 +20,12 @@
 
         private IPortableGraymap _singleLineColorRamp;
 
-        private IPortableGraymapToConverter<Bitmap> _convert;
+        private IConverter<IPortableGraymap, Bitmap> _convert;
 
         [Test]
         public void TestWithSingleLineColorRamp()
         {
-            var bitmap = _convert.ConvertFrom(_singleLineColorRamp);
+            var bitmap = _convert.Convert(_singleLineColorRamp);
 
             for (var x = 0; x < 17; x++)
             {

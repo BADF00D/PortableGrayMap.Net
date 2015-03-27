@@ -4,9 +4,9 @@
     using System.Drawing.Imaging;
     using Tanpohp.Extensions;
 
-    internal class OneWayPortableGraymapToBitmapConverter : IPortableGraymapToConverter<Bitmap>
+    internal class PortableGraymapToBitmapConverter : IConverter<IPortableGraymap, Bitmap>
     {
-        public Bitmap ConvertFrom(IPortableGraymap source)
+        public Bitmap Convert(IPortableGraymap source)
         {
             var bitmap = new Bitmap(source.Width, source.Height, PixelFormat.Format32bppArgb);
 
@@ -16,7 +16,7 @@
                 for (var x = 0; x < source.Width; x++)
                 {
                     var sourceGrayValue = source[x, y];
-                    var destinationGrayValue = 255-(int)((sourceGrayValue*grayValueScale).Clamp(0,255));
+                    var destinationGrayValue = 255 - (int) ((sourceGrayValue*grayValueScale).Clamp(0, 255));
                     var grayValue = Color.FromArgb(255, destinationGrayValue, destinationGrayValue, destinationGrayValue);
                     bitmap.SetPixel(x, y, grayValue);
                 }
