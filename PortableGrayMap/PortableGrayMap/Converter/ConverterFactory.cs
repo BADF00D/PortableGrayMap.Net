@@ -9,8 +9,8 @@
         private static readonly Lazy<IConverter<IPortbaleBitmap, Bitmap>> PbmToBitmapConverter =
             new Lazy<IConverter<IPortbaleBitmap, Bitmap>>(() => new PortableBitmapToBitmapConverter());
 
-        private static readonly Lazy<IPortableBitmapToConverter<BitmapSource>> PbmToBitmapSourceConverter =
-            new Lazy<IPortableBitmapToConverter<BitmapSource>>(() => new OneWayPortableBitmapToBitmapSourceConverter());
+        private static readonly Lazy<IConverter<IPortbaleBitmap, BitmapSource>> PbmToBitmapSourceConverter =
+            new Lazy<IConverter<IPortbaleBitmap, BitmapSource>>(() => new PortableBitmapToBitmapSourceConverter());
 
         private static readonly Lazy<IConverter<IPortableGraymap,BitmapSource>> PgmToBitmapSourceConverter =
             new Lazy<IConverter<IPortableGraymap, BitmapSource>>(() => new PortableGraymapToBitmapSourceConverter());
@@ -18,7 +18,7 @@
         private static readonly Lazy<IConverter<IPortableGraymap, Bitmap>> PgmToBitmapConverter =
             new Lazy<IConverter<IPortableGraymap,Bitmap>>(() => new PortableGraymapToBitmapConverter());
 
-        public static IPortableBitmapToConverter<BitmapSource> ToBitmapSourceConverter
+        public static IConverter<IPortbaleBitmap, BitmapSource> ToBitmapSourceConverter
         {
             get { return PbmToBitmapSourceConverter.Value; }
         }

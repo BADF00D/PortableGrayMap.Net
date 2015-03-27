@@ -1,7 +1,6 @@
 ﻿namespace PortableGrayMapTest.Converter
 {
     using System.Drawing;
-    using System.IO;
     using System.Windows.Media.Imaging;
     using NUnit.Framework;
     using PortableGrayMap;
@@ -14,7 +13,7 @@
         [SetUp]
         public void Setup()
         {
-            _converter = new OneWayPortableBitmapToBitmapSourceConverter();
+            _converter = new PortableBitmapToBitmapSourceConverter();
 
             _sourceWithBlackCross = new PortbaleBitmap(10, 10, new bool[100]);
             for (var i = 0; i < 10; i++)
@@ -24,7 +23,7 @@
             }
         }
 
-        private IPortableBitmapToConverter<BitmapSource> _converter;
+        private IConverter<IPortbaleBitmap, BitmapSource> _converter;
 
         private IPortbaleBitmap _sourceWithBlackCross;
 
@@ -32,7 +31,7 @@
         [Test]
         public void TestWithBlackCrossImage()
         {
-            var bitmapSource = _converter.ConvertFrom(_sourceWithBlackCross);
+            var bitmapSource = _converter.Convert(_sourceWithBlackCross);
             //this is ugly, but we cant directyly access pixels in a bitmap source.
             var bitmap = bitmapSource.ConvertToBitmap();
             Assert.AreEqual(10, bitmapSource.Width, "Width");

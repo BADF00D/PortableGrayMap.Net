@@ -3,9 +3,9 @@
     using System.Drawing;
     using System.Windows.Media.Imaging;
 
-    public class OneWayPortableBitmapToBitmapSourceConverter : IPortableBitmapToConverter<BitmapSource>
+    public class PortableBitmapToBitmapSourceConverter : IConverter<IPortbaleBitmap, BitmapSource>
     {
-        public BitmapSource ConvertFrom(IPortbaleBitmap source)
+        public BitmapSource Convert(IPortbaleBitmap source)
         {
             var pixelFormat = System.Windows.Media.PixelFormats.Bgr32;
 
