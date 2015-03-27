@@ -55,6 +55,7 @@
     <Compile Include="Converter\PortableGraymapToBitmapConverter.cs" />
     <Compile Include="Converter\PortableGraymapToBitmapSourceConverter.cs" />
     <Compile Include="Converter\PortablePixmapToBitmapConverter.cs" />
+    <Compile Include="Converter\PortablePixmapToBitmapSourceConverter.cs" />
     <Compile Include="IPortableGrayMap.cs" />
     <Compile Include="IPortablePixmap.cs" />
     <Compile Include="IPortbaleBitmap.cs" />

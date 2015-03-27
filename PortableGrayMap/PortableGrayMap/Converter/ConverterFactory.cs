@@ -21,6 +21,9 @@
         private static readonly Lazy<IConverter<IPortablePixmap, Bitmap>>  PpmToBitmapConverter =
             new Lazy<IConverter<IPortablePixmap, Bitmap>>(()=> new PortablePixmapToBitmapConverter());
 
+        private static readonly Lazy<IConverter<IPortablePixmap, BitmapSource>> PpmToBitmapSourceConverter =
+            new Lazy<IConverter<IPortablePixmap, BitmapSource>>(() => new PortablePixmapToBitmapSourceConverter());
+
         public static IConverter<IPortbaleBitmap, BitmapSource> ToBitmapSourceConverter
         {
             get { return PbmToBitmapSourceConverter.Value; }
@@ -44,6 +47,11 @@
         public static IConverter<IPortablePixmap, Bitmap> PortablePixmapToBitmapConverter
         {
             get { return PpmToBitmapConverter.Value; }
+        }
+
+        public static IConverter<IPortablePixmap, BitmapSource> PortablePixmapToBitmapSourceConverter
+        {
+            get { return PpmToBitmapSourceConverter.Value; }
         }
     }
 }
