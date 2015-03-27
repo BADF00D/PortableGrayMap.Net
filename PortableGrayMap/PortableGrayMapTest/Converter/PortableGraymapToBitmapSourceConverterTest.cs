@@ -18,7 +18,7 @@ namespace PortableGrayMapTest.Converter
         [SetUp]
         public void Setup()
         {
-            _convert = new PortableGraymapToBitmapSourceConverter();
+            _convert = new OneWayPortableGraymapToBitmapSourceConverter();
 
             _singleLineColorRamp = new PortableGraymap(17, 1, new ushort[17], 17);
             for (var x = 0; x < 17; x++) _singleLineColorRamp[x, 0] = (ushort)x;

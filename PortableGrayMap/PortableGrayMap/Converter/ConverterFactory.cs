@@ -7,16 +7,16 @@
     public static class ConverterFactory
     {
         private static readonly Lazy<IPortableBitmapToConverter<Bitmap>> PbmToBitmapConverter =
-            new Lazy<IPortableBitmapToConverter<Bitmap>>(() => new PortableBitmapToBitmapConverter());
+            new Lazy<IPortableBitmapToConverter<Bitmap>>(() => new OneWayPortableBitmapToBitmapConverter());
 
         private static readonly Lazy<IPortableBitmapToConverter<BitmapSource>> PbmToBitmapSourceConverter =
-            new Lazy<IPortableBitmapToConverter<BitmapSource>>(() => new PortableBitmapToBitmapSourceConverter());
+            new Lazy<IPortableBitmapToConverter<BitmapSource>>(() => new OneWayPortableBitmapToBitmapSourceConverter());
 
         private static readonly Lazy<IPortableGraymapToConverter<BitmapSource>> PgmToBitmapSourceConverter =
-            new Lazy<IPortableGraymapToConverter<BitmapSource>>(() => new PortableGraymapToBitmapSourceConverter());
+            new Lazy<IPortableGraymapToConverter<BitmapSource>>(() => new OneWayPortableGraymapToBitmapSourceConverter());
 
         private static readonly Lazy<IPortableGraymapToConverter<Bitmap>> PgmToBitmapConverter =
-            new Lazy<IPortableGraymapToConverter<Bitmap>>(() => new PortableGraymapToBitmapConverter());
+            new Lazy<IPortableGraymapToConverter<Bitmap>>(() => new OneWayPortableGraymapToBitmapConverter());
 
         public static IPortableBitmapToConverter<BitmapSource> ToBitmapSourceConverter
         {

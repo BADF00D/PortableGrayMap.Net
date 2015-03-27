@@ -14,7 +14,7 @@
         [SetUp]
         public void Setup()
         {
-            _converter = new PortableBitmapToBitmapSourceConverter();
+            _converter = new OneWayPortableBitmapToBitmapSourceConverter();
 
             _sourceWithBlackCross = new PortbaleBitmap(10, 10, new bool[100]);
             for (var i = 0; i < 10; i++)

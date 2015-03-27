@@ -2,11 +2,10 @@
 {
     using System.Drawing;
     using System.Windows.Media.Imaging;
-    using Tanpohp.Extensions;
 
-    internal class PortableGraymapToBitmapSourceConverter : IPortableGraymapToConverter<BitmapSource>
+    public class OneWayPortableBitmapToBitmapSourceConverter : IPortableBitmapToConverter<BitmapSource>
     {
-        public BitmapSource ConvertFrom(IPortableGraymap source)
+        public BitmapSource ConvertFrom(IPortbaleBitmap source)
         {
             var pixelFormat = System.Windows.Media.PixelFormats.Bgr32;
 
@@ -14,14 +13,11 @@
 
             var pixels = new byte[stride*source.Height];
 
-            var grayValueScale = 255d/source.MaxValue;
             for (var y = 0; y < source.Height; y++)
             {
                 for (var x = 0; x < source.Width; x++)
                 {
-                    var sourceGrayValue = source[x, y];
-                    var destinationGrayValue = 255 - (int) ((sourceGrayValue*grayValueScale).Clamp(0, 255));
-                    var color = Color.FromArgb(255, destinationGrayValue, destinationGrayValue, destinationGrayValue);
+                    var color = source[x, y] ? Color.Black : Color.White;
 
                     var baseIndex = x*4 + y*stride;
                     pixels[baseIndex] = color.B;

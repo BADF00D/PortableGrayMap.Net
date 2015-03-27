@@ -4,7 +4,7 @@
     using System.Drawing.Imaging;
     using Tanpohp.Extensions;
 
-    internal class PortableGraymapToBitmapConverter : IPortableGraymapToConverter<Bitmap>
+    internal class OneWayPortableGraymapToBitmapConverter : IPortableGraymapToConverter<Bitmap>
     {
         public Bitmap ConvertFrom(IPortableGraymap source)
         {

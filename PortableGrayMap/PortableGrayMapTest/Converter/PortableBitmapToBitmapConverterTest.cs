@@ -12,7 +12,7 @@
         [SetUp]
         public void Setup()
         {
-            _converter = new PortableBitmapToBitmapConverter();
+            _converter = new OneWayPortableBitmapToBitmapConverter();
 
             _sourceWithBlackCross = new PortbaleBitmap(10, 10, new bool[100]);
             _sourceWithDiagonalLine = new PortbaleBitmap(10, 10, new bool[100]);
